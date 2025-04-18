@@ -4,36 +4,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Title</title>
+  <link rel="shortcut icon" href="assets/ball.png" type="image/png">
+  <title>Simple Breakout Game</title>
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="icon" type="image/png" href="/assets/ball.png">
-  <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <div class="container">
-    <header>
-      <h1>Project</h1>
-    </header>
-
-    <main>
-      <div id="card-grid" class="card-grid">
-        <!-- Cards will be generated with JavaScript -->
+  <div class="game-container">
+    <h1>Breakout Game</h1>
+    <div class="canvas-container">
+      <canvas id="gameCanvas" width="800" height="600"></canvas>
+      <div id="startScreen" class="screen">
+        <h2>Simple Breakout</h2>
+        <p>Use left and right arrow keys or mouse to move the paddle</p>
+        <button id="startButton">Start Game</button>
       </div>
-    </main>
-
-    <footer>
-      <p>&nbsp;</p>
-    </footer>
+      <div id="gameOverScreen" class="screen hidden">
+        <h2>Game Over</h2>
+        <p>Your score: <span id="finalScore">0</span></p>
+        <button id="restartButton">Play Again</button>
+      </div>
+      <div id="winScreen" class="screen hidden">
+        <h2>You Win!</h2>
+        <p>Your score: <span id="winScore">0</span></p>
+        <button id="winRestartButton">Play Again</button>
+      </div>
+    </div>
+    <div class="game-info">
+      <p>Score: <span id="score">0</span></p>
+      <p>Lives: <span id="lives">3</span></p>
+    </div>
   </div>
-
-
-  <script type="module" src="./js/app.js"></script>
+  <script src="js/main.js" type="module"></script>
 </body>
 
 </html>

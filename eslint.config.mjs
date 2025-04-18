@@ -12,6 +12,7 @@ export default [
         console: 'readonly',
         fetch: 'readonly',
         setTimeout: 'readonly',
+        requestAnimationFrame: 'readonly',
         // Node.js globals
         process: 'readonly',
         __dirname: 'readonly',
